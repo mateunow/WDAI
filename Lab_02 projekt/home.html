@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
-  <title>Mój leśny zagajnik</title>
+  <title>Home Mój leśny zagajnik</title>
   <link rel="stylesheet" href="style.css" />
 
   <script>
@@ -13,15 +13,29 @@
         x.style.display = "none";
       }
     }
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      } // add zero in front of numbers < 10
+      return i;
+    }
   </script>
 </head>
 
 <body>
   <header>
-    <p style="text-align: center;">
-    <h1>
-      Witaj na najlepszej stronie poświęconej grzybom
-    </h1> </p>
+    <h1>Witaj na najlepszej stronie poświęconej grzybom</h1>
   </header>
   <main>
     <h2>Witamy w Świecie Grzybów!</h2>
@@ -85,8 +99,7 @@
           gładka lub pomarszczona ale nie zamszowa; u młodych owocników i przy
           wilgotnej pogodzie nieco lepka.
         </p>
-        <img src="borowik.jpg" width="50% "
-        height="50%" />
+        <img src="borowik.jpg" width="50% " height="50%" />
       </li>
       <br />
       <li>
@@ -105,8 +118,7 @@
           łamliwy, w trzonie włóknisty. Zapach miły, owocowy, korzenny, może
           przypominać pieprz. Smak łagodny, kwaskowaty do ostrawego.
         </p>
-        <img src="kurka.jpeg" width="50% "
-        height="50%"/>
+        <img src="kurka.jpeg" width="50% " height="50%" />
       </li>
       <br />
       <li>
@@ -126,8 +138,7 @@
           kłaczkowatej. Pierścień błoniasty, zwisający, słaby, delikatny,
           zanikający.
         </p>
-        <img src="pieczarka łąkowa.jpg" width="50% "
-        height="50%" />
+        <img src="pieczarka łąkowa.jpg" width="50% " height="50%" />
       </li>
       <br />
       <li>
@@ -236,8 +247,10 @@
         <div id="myDIV">
           <p>
             <b> Muchomor zielonawy <i>(Amanita phalloides)</i></b>
-          </p><h1>
-          <p style="color: red">Śmiertelnie trujący.</p> </h1>
+          </p>
+          <h1>
+            <p style="color: red">Śmiertelnie trujący.</p>
+          </h1>
           <p>
             Dawką śmiertelną jest już jeden średni okaz, śmiercią może się
             skończyć zjedzenie ledwo 30 - 50 g grzyba. Trujący składnik,
@@ -250,7 +263,7 @@
             src="muchomor zielonawy.jpg"
             alt="muchomor zielonawy (TRUJĄCE!)"
             width="50% "
-          height="50%"
+            height="50%"
           />
         </div>
       </li>
@@ -258,6 +271,7 @@
   </main>
 
   <nav>
+    <div id="txt" style="color: white"></div>
     <a href="home.html" style="color: white"> Strona główna</a> <br />
     <a href="galeria.html" style="color: white">Galeria</a> <br />
     <a href="kontakt.html" style="color: white"> Kontakt</a>
