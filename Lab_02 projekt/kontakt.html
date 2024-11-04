@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      function validateEmail(event) {
+        const emailField = document.getElementById("email");
+        const email = emailField.value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (!emailPattern.test(email)) {
+          alert("Proszę podać prawidłowy adres e-mail.");
+          event.preventDefault();
+          emailField.focus();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Witaj na najlepszej stronie poświęconej grzybom</h1>
+    </header>
+    <main>
+      <div class="container">
+        <form onsubmit="validateEmail(event)">
+          <div class="row">
+            <div class="col-25"><label for="email">Email:</label><br /></div>
+            <div class="col-75">
+              <input
+                placeholder="Wpisz adres e-mail"
+                type="text"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <br />
+          </div>
+          <div class="row">
+            <div class="col-25"><label>Temat</label></div>
+            <div class="col-75">
+              <select required>
+                <option value="">Wybierz temat</option>
+                <option value="Info">Nieprawidłowe informacje</option>
+                <option value="Spr">Sprawdzenie, czy grzyb jest jadalny</option>
+                <option value="Inne">Inne</option></select
+              ><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="wiadomość">Wiadomość:</label><br />
+            </div>
+            <div class="col-75">
+              <textarea placeholder="Napisz wiadomość" required></textarea
+              ><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">Załączniki</div>
+            <div class="col-75">
+              <input type="file" id="myfile" name="myfile" /><br />
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <nav>
+      <a href="home.html" style="color: white"> Strona główna</a> <br />
+      <a href="galeria.html" style="color: white">Galeria </a> <br />
+      <a href="kontakt.html" style="color: white"> Kontakt</a>
+    </nav>
+    <footer>
+      <p>
+        Strona stworzona przez: <b><i>Mateusza Nowaka</i></b>
+      </p>
+    </footer>
+  </body>
+</html>
