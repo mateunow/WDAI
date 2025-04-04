@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f8ff;
+      font-family: "Arial", sans-serif;
+      margin: 0;
+    }
+
+    #time {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #container {
+      text-align: center;
+    }
+    .digit {
+      padding: 0 10px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="time">
+      <span class="digit" id="min">0min</span>
+      <span class="digit" id="sec">00s</span>
+    </div>
+    <br />
+    <button class="btn" id="start">Start</button>
+    <button class="btn" id="stop">Stop</button>
+    <button class="btn" id="reset">Reset</button>
+  </div>
+  <script src="script.js"></script>
+</body>

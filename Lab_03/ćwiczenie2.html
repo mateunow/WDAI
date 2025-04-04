@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f7f7f7;
+      font-family: "Verdana", sans-serif;
+      margin: 0;
+    }
+
+    input[type="digit"] {
+      width: 200px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-left: 10px;
+    }
+
+    .btn {
+      background-color: #28a745;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      margin-top: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  Minimalna długość hasła <input type="digit" id="minLenght" /> <br />
+  Maksymalna długość hasła <input type="digit" id="maxLenght" /> <br />
+  Czy hasło ma zawierać wielkie litery <input type="checkbox" id="bigLetters" />
+  <br />
+  Czy hasło ma zawierać znaki specjalne?
+  <input type="checkbox" id="specialLetters" /> <br />
+  <button class="btn" id="generate">Wygeneruj hasło</button>
+  <script src="script2.js"></script>
+</body>
