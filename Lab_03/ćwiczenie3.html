@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    img {
+      width: 100px;
+      height: auto;
+    }
+    #controls {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="controls">
+    <input type="text" id="filter-input" placeholder="Search by title..." />
+    <select id="sort-select">
+      <option value="original">Kolejność originalna</option>
+      <option value="asc">Rosnąco</option>
+      <option value="desc">Malejąco</option>
+    </select>
+  </div>
+  <table id="product-table">
+    <thead>
+      <tr>
+        <th>Zdjęcie</th>
+        <th>Tytuł</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <script src="script3.js"></script>
+</body>
